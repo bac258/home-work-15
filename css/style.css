@@ -1,0 +1,117 @@
+/* COMMON CSS STARTS */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+html{
+    font-size: 10px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: "arial";
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+/*COMMON CSS ENDS */
+.header{
+    background-color: rgb(240, 240, 225);
+    padding: 15px 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.header .sidebarBtn{
+    font-size: 50px;
+}
+.header button{
+    padding: 15px ;
+    border: none;
+    background-color: transparent;
+    color: 000;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+.sidebar{
+    background-color: rgba(0, 0, 0, 0.34);
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s;
+}
+
+
+.sidebar.active {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.sidebar aside{
+    width: 80%;
+    max-width: 350px;
+    background-color: #fff;
+    height: 100%;
+    text-align: center;
+    padding: 150px 0;
+    position: relative;
+    transform: translateX(-100%);
+    transition: 0.15s;
+    
+}
+
+
+.sidebar.active aside{
+    transition: 0.35s;
+    transform: translateX(0%);
+   background-color: rgb(244, 240, 235);
+    
+}
+
+.sidebar aside a{
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    display: block;
+    color: #000;
+    transition: 0.4s;
+}
+.sidebar aside ul li:hover a{
+    color: rgba(255, 0, 0, 0.301);
+    
+}
+
+
+.sidebar aside .crossBtn{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 4rem;
+    height: 4rem;
+    color: rgba(0, 0, 0, 0.295);
+    font-weight: 50;
+    line-height: 4rem;
+    font-size: 4rem;
+    cursor: pointer;
+}
